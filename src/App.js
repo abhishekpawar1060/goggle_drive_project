@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Sidebar from './components/sidebar/Sidebar';
+import FileView from './components/FilesView/FileView';
 
 function App() {
 
@@ -16,7 +17,12 @@ function App() {
   return (
     <div className='App'>
       <Header userPhoto={user.photoURL}/>
-      <Sidebar />
+      
+      <div className='app_main'>
+        <Sidebar />
+        <FileView />
+      </div>
+    
     </div>
   );
 }

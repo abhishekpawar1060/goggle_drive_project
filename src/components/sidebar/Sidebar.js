@@ -2,6 +2,7 @@ import React from 'react';
 import NewFile from './NewFile';
 import SidebarItem from './SidebarItem';
 
+
 import '../../styles/Sidebar.css';
 
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
@@ -15,7 +16,9 @@ import StorageIcon from '@mui/icons-material/Storage';
 function Sidebar() {
   return (
     <div className='sidebar'>
-        <NewFile />
+
+      <NewFile />
+
       <div className='sidebar_itemsContainer'>
         <SidebarItem arrow icon={(<InsertDriveFileIcon/>)} label={'My Drive'} />
         <SidebarItem arrow icon={(<ImportantDevicesIcon/>)} label={'Computers'} />
