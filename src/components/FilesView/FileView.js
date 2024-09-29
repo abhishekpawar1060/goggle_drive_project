@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 import { collection, getDocs } from "firebase/firestore";
+import FileCart from './FileCart';
 import FileItem from './FileItem';
 import "../../styles/FileView.css";
 
@@ -24,13 +25,18 @@ function FileView() {
 
   useEffect(() => {
     fetchPost();
-  }, [])
+  }, [files]);
 
   return (
     <div className='fileView'>
       <div className='fileView_row'>
         {
-          // file card
+          files.slice(0, 5).map(( item, id ) => (           
+            <FileCart 
+              key={id}
+              name={item.caption} 
+            />
+          ))
         }
       </div>
 
